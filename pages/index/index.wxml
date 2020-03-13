@@ -1,5 +1,5 @@
 <van-notice-bar
-  left-icon="/static/img/announcement.png"
+  left-icon="/static/img/shop/announcement.png"
   text="{{announcement}}"
   scrollable="false"
 />
@@ -15,6 +15,14 @@
 <van-grid column-num="4" square border="{{false}}">
   <van-grid-item icon="{{item.icon}}" text="{{item.text}}" url="{{item.url}}" wx:for="{{ grids }}" wx:key="*this"/>
 </van-grid>
-<view class="page">
-  <view>shop</view>
-</view>
+<cover-image src="/static/img/shop/special.jpg" bindtap="jumpToSpecial"></cover-image>
+<van-grid column-num="2">
+  <van-grid-item use-slot wx:for="{{ 4 }}" border="{{false}}" gutter="{{ 10 }}" wx:for-item="index">
+    <van-image src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"   width="8rem"
+  height="8rem"
+  fit="contain"></van-image>
+  <text>item{{index}}</text>
+  <text>¥100</text>
+  <van-icon name="cart-o" color="orange" size="20px"/>
+  </van-grid-item>
+</van-grid>
