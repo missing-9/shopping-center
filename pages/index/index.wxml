@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<van-notice-bar
+  left-icon="/static/img/announcement.png"
+  text="{{message}}"
+  scrollable="false"
+/>
+<view class="page">
+  <view>这是商铺首页</view>
+  <van-button type="primary">按钮</van-button>
+</view>
