@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/category/index"
+    "pages/category/index",
+    "pages/index/quickly-buy/index"
   ],
   "tabBar": {
     "color": "#b7b7b7",
