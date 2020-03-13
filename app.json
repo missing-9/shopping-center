@@ -8,28 +8,26 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "商铺首页",
+        "text": "商域",
         "iconPath": "/static/img/home.png",
         "selectedIconPath":"/static/img/home-selected.png"
       },
       {
         "pagePath": "pages/category/index",
-        "text": "水果分类",
+        "text": "全部分类",
         "iconPath": "/static/img/category.png",
         "selectedIconPath": "/static/img/category-selected.png"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "运行日志",
-        "iconPath": "/static/img/category.png",
-        "selectedIconPath": "/static/img/category-selected.png"
+        "text": "日志"
       }
     ]
   },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "原野二郎之奇妙物语",
+    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",

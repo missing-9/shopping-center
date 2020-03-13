@@ -1,10 +1,20 @@
-<!--index.wxml-->
 <van-notice-bar
   left-icon="/static/img/announcement.png"
-  text="{{message}}"
+  text="{{announcement}}"
   scrollable="false"
 />
+<swiper indicator-dots="{{swiper.indicatorDots}}"
+  autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}">
+  <block wx:for="{{swiper.imgs}}" wx:key="*this">
+    <swiper-item>
+      <cover-image src="{{item}}"></cover-image>
+    </swiper-item>
+  </block>
+</swiper>
+<van-search placeholder="搜索" value="{{ searchValue }}" input-align="center" shape="round"/>
+<van-grid column-num="4" square border="{{false}}">
+  <van-grid-item icon="{{item.icon}}" text="{{item.text}}" url="{{item.url}}" wx:for="{{ grids }}" wx:key="*this"/>
+</van-grid>
 <view class="page">
-  <view>这是商铺首页</view>
-  <van-button type="primary">按钮</van-button>
+  <view>shop</view>
 </view>
