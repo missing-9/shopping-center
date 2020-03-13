@@ -1,4 +1,5 @@
 {
-  "usingComponents": {
-  }
+  "navigationBarTitleText": "全部分类",
+  "backgroundColor": "#eeeeee",
+  "enablePullDownRefresh": false
 }

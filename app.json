@@ -5,12 +5,16 @@
     "pages/category/index"
   ],
   "tabBar": {
+    "color": "#b7b7b7",
+    "selectedColor": "#AB956D",
+    "borderStyle": "white",
+    "backgroundColor": "#f5f5f5",
     "list": [
       {
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "/static/img/home.png",
-        "selectedIconPath":"/static/img/home-selected.png"
+        "selectedIconPath": "/static/img/home-selected.png"
       },
       {
         "pagePath": "pages/category/index",
@@ -20,15 +24,17 @@
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "/static/img/person.png",
+        "selectedIconPath": "/static/img/person-selected.png"
       }
     ]
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#AB956D",
     "navigationBarTitleText": "原野二郎之奇妙物语铺",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
