@@ -27,34 +27,29 @@ Page({
       {
         id: 1,
         name: 'item1',
-        count: 1,
-        price: 100,
         img: 'https://img.yzcdn.cn/vant/apple-1.jpg',
-        category: ['a', 'b']
+        category: ['c', 'd'],
+        priceInfo: [{ category: 'a', price: 100 }, { category: 'b', price: 200 }],
       },
       {
         id: 2,
         name: 'item2',
-        count: 1,
-        price: 200,
         img: 'https://img.yzcdn.cn/vant/apple-2.jpg',
-        category: ['c', 'd']
+        category: ['c', 'd'],
+        priceInfo: [{ category: 'a', price: 100 }, { category: 'b', price: 200 }],
       },
       {
         id: 3,
         name: 'item3',
-        count: 1,
-        price: 300,
+        category: ['c', 'd'],
         img: 'https://img.yzcdn.cn/vant/apple-3.jpg',
-        category: ['e', 'f']
+        priceInfo: [{ category: 'a', price: 100 }, { category: 'b', price: 200 }],
       },
       {
         id: 4,
         name: 'item4',
-        count: 1,
-        price: 400,
         img: 'https://img.yzcdn.cn/vant/apple-4.jpg',
-        category: ['a']
+        priceInfo: [{ category: 'a', price: 100 }, { category: 'b', price: 200 }],
       }
     ],
     currentGood: { },

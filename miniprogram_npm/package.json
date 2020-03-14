@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "@vant/weapp": "^1.0.7",
+    "miniprogram-computed": "^2.1.1",
     "weui-miniprogram": "^0.2.2"
   },
   "devDependencies": {},
