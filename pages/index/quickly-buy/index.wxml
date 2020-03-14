@@ -2,5 +2,5 @@
   quickly buy
 </view>
 <view wx:for="{{cartInfo}}" wx:key="{{item.id}}">
-  item is {{item.id}}, count is {{item.count}}
+  item is {{item.name}}, count is {{item.count}}
 </view>

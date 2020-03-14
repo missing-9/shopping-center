@@ -1,0 +1,20 @@
+<!--components/good-modal.wxml-->
+<van-popup show="{{ show }}" bind:close="onClose" closeable>
+  <view class="good-content">
+    <text style="text-align: center">{{good.name}}</text>
+    <view >
+        <text>规格</text>    
+    <view class="good-category">
+      <van-button wx:for="{{good.category}}" wx:key="index"  size="mini" custom-style="width: 50px">{{item}}</van-button>
+    </view>
+    </view>
+    <view class="good-quantity">
+      <text>购买数量</text>
+      <van-stepper value="{{count}}" bind:change="changeCount" />
+    </view>
+    <view class="good-buy">
+      <text>价格: {{good.price}}</text>
+      <van-button bindtap="addToCart"  type="info" size="small" custom-style="width: 100px">加人购物车</van-button>
+    </view>
+  </view>
+</van-popup>

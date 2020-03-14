@@ -7,6 +7,7 @@
     "van-grid": "/miniprogram_npm/miniprogram_npm/@vant/weapp/grid/index",
     "van-grid-item": "/miniprogram_npm/miniprogram_npm/@vant/weapp/grid-item/index",
     "van-image": "/miniprogram_npm/miniprogram_npm/@vant/weapp/image/index",
-     "van-icon": "/miniprogram_npm/miniprogram_npm/@vant/weapp/icon/index"
+    "van-icon": "/miniprogram_npm/miniprogram_npm/@vant/weapp/icon/index",
+    "good-modal": "/components/good-modal/index"
   }
 }

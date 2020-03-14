@@ -22,14 +22,16 @@
 <cover-image src="/static/img/shop/special.jpg" bindtap="jumpToSpecial"></cover-image>
 
 <van-grid column-num="2">
-  <van-grid-item use-slot wx:for="{{ 4 }}" border="{{false}}" gutter="{{ 10 }}" wx:for-item="index">
-    <van-image src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"   width="8rem"
+  <van-grid-item use-slot wx:for="{{ goods }}" border="{{false}}" gutter="{{ 10 }}" wx:key="index">
+    <van-image src="{{item.img}}"   width="8rem"
   height="8rem"
   fit="contain"></van-image>
-    <text>item{{index}}</text>
+    <text>{{item.name}}</text>
     <view class="shopping-cart">
-      <text>¥100</text>
-      <van-icon data-id="{{index}}" name="cart-o" color="orange" size="1.5rem" bindtap="addToCart"/>
+      <text>¥{{item.price}}</text>
+      <van-icon data-id="{{item.id}}" name="cart-o" color="orange" size="1.5rem" bindtap="showPopup"/>
     </view>
   </van-grid-item>
 </van-grid>
+
+<good-modal good="{{currentGood}}" show="{{show}}" bind:close="onClose"></good-modal>

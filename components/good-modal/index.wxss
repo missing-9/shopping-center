@@ -1,0 +1,26 @@
+/* components/good-modal.wxss */
+.good-content {
+  font-size: 14px;
+  margin-top: 40rpx;
+  padding: 20rpx;
+  width: 500rpx;
+  height: 400rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: space-between;
+  justify-content: space-between;
+}
+.good-category {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.good-quantity {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.good-buy {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
