@@ -23,6 +23,6 @@ Page({
     ]
   },
   jumpToSpecial() {
-    wx.navigateTo({ url: './quickly-buy/index' });
+    wx.navigateTo({ url: '../goods/index' });
   }
 });

@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/category/index",
-    "pages/index/quickly-buy/index"
+    "pages/index/quickly-buy/index",
+    "pages/goods/index",
+    "pages/cart/index"
   ],
   "tabBar": {
     "color": "#b7b7b7",
@@ -24,10 +26,16 @@
         "selectedIconPath": "/static/img/tab-bar/category-selected.png"
       },
       {
+        "pagePath": "pages/cart/index",
+        "text": "购物车",
+        "iconPath": "/static/img/tab-bar/cart.png",
+        "selectedIconPath": "/static/img/tab-bar/category-selected.png"
+      },
+      {
         "pagePath": "pages/logs/logs",
         "text": "我的",
-        "iconPath": "/static/img/person.png",
-        "selectedIconPath": "/static/img/person-selected.png"
+        "iconPath": "/static/img/tab-bar/person.png",
+        "selectedIconPath": "/static/img/tab-bar/person-selected.png"
       }
     ]
   },

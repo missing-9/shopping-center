@@ -16,7 +16,9 @@ Page({
     detail: [],
     curIndex: 0,
     isScroll: false,
-    toView: 'one'
+    toView: 'one',
+    kwd:' ',
+    loadingTxt: "加载更多"
   },
   switchTab(e) {
     const self = this;
