@@ -3,8 +3,6 @@
     <van-image src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"   width="8rem"
   height="8rem"
   fit="contain"></van-image>
-  <text>item{{index}}</text>
-  <text>¥100</text>
   <van-icon name="cart-o" color="orange" size="20px"/>
   </van-grid-item>
 </van-grid>
