@@ -3,6 +3,7 @@
   text="{{announcement}}"
   scrollable="false"
 />
+
 <swiper indicator-dots="{{swiper.indicatorDots}}"
   autoplay="{{swiper.autoplay}}" interval="{{swiper.interval}}" duration="{{swiper.duration}}">
   <block wx:for="{{swiper.imgs}}" wx:key="*this">
@@ -11,18 +12,24 @@
     </swiper-item>
   </block>
 </swiper>
+
 <van-search placeholder="搜索" value="{{ searchValue }}" input-align="center" shape="round"/>
+
 <van-grid column-num="4" square border="{{false}}">
   <van-grid-item icon="{{item.icon}}" text="{{item.text}}" url="{{item.url}}" wx:for="{{ grids }}" wx:key="*this"/>
 </van-grid>
+
 <cover-image src="/static/img/shop/special.jpg" bindtap="jumpToSpecial"></cover-image>
+
 <van-grid column-num="2">
   <van-grid-item use-slot wx:for="{{ 4 }}" border="{{false}}" gutter="{{ 10 }}" wx:for-item="index">
     <van-image src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"   width="8rem"
   height="8rem"
   fit="contain"></van-image>
-  <text>item{{index}}</text>
-  <text>¥100</text>
-  <van-icon name="cart-o" color="orange" size="20px"/>
+    <text>item{{index}}</text>
+    <view class="shopping-cart">
+      <text>¥100</text>
+      <van-icon data-id="{{index}}" name="cart-o" color="orange" size="1.5rem" bindtap="addToCart"/>
+    </view>
   </van-grid-item>
 </van-grid>

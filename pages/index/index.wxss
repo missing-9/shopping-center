@@ -1,0 +1,8 @@
+.shopping-cart {
+  width: 80%;
+  margin-top: 15rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}

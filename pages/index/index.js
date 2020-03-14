@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
   data: {
     announcement: 'Vant Weapp 是移动端 Vue 组件库 Vant 的小程序版本，两者基于相同的视觉规范，提供一致的 API 接口，助力开发者快速搭建小程序应用。',
@@ -24,5 +25,15 @@ Page({
   },
   jumpToSpecial() {
     wx.navigateTo({ url: './quickly-buy/index' });
+  },
+  addToCart(e) {
+    const currentId = e.currentTarget.dataset.id;
+    const cart = app.globalData.cart;
+    const current = cart.find(i => i.id === currentId)
+    if (current) {
+      current.count += 1;
+    } else {
+      cart.push({ id: currentId, count: 1});
+    }
   }
 });
