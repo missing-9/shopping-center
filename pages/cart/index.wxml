@@ -1,3 +1,16 @@
-<view>
-  cart
+<view wx:if="{{cartInfo.length !== 0}}">
+  <van-swipe-cell right-width="{{ 65 }}"  wx:for="{{cartInfo}}" wx:key="id" close="deleteItem">
+    <van-card
+        num="{{item.count}}"
+        price="{{item.count * item.selectedPrice}}"
+        title="{{item.name}}"
+        desc="类型：{{item.selectedCategory}}"
+        thumb="{{item.img}}"
+        custom-class="custome-card"
+      />
+      <view data-id="{{item.id}}" slot="right" class="delete" bindtap="deleteItem">删除</view>
+  </van-swipe-cell>
+</view>
+<view wx:else>
+  暂无商品，请到首页添加吧~
 </view>

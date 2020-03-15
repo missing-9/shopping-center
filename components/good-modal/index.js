@@ -58,7 +58,7 @@ Component({
       if (current) {
         current.count += this.data.count;
       } else {
-        cart.push({ ...this.data.good, count: this.data.count });
+        cart.push({ ...this.data.good, count: this.data.count, selectedPrice: this.data.currentPrice });
       }
       this.onClose();
     },

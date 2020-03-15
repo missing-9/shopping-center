@@ -1,0 +1,14 @@
+.delete {
+  background-color: red;
+  color: white;
+  display: flex;
+  width: 205%;
+  height: 100%;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.custome-card {
+  border-bottom: 1px solid gray;
+}

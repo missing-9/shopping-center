@@ -1,3 +1,4 @@
+const app = getApp();
 // pages/cart/index.js
 Page({
 
@@ -5,14 +6,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    cartInfo: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
   /**
@@ -26,7 +27,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({ cartInfo: app.globalData.cart });
   },
 
   /**
@@ -62,5 +63,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  deleteItem(e) {
+    const selectedId = e.currentTarget.dataset.id;
+    const cartInfo = this.data.cartInfo.filter(i => i.id !== selectedId);
+    this.setData({ cartInfo });
+    app.globalData.cart = cartInfo;
   }
 })
