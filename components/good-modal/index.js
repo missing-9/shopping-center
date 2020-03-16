@@ -54,7 +54,9 @@ Component({
     },
     addToCart() {
       const cart = app.globalData.cart;
-      const current = cart.find(i => i.id === this.data.good.id)
+      // const current = cart.find(i => i.id === this.data.good.id)
+      const currents = cart.filter(i => i.id === this.data.good.id);
+      const current = currents.find(i => i.selectedCategory === this.data.good.selectedCategory);
       if (current) {
         current.count += this.data.count;
       } else {
