@@ -49,7 +49,7 @@ Page({
         priceInfo: [{ category: 'g', price: 100 }, { category: 'h', price: 200 }, { category: 'i', price: 300 }],
       }
     ],
-    currentGood: { },
+    currentGood: {}
   },
   jumpToSpecial() {
     wx.navigateTo({ url: './quickly-buy/index' });

@@ -1,26 +1,61 @@
 /* components/good-modal.wxss */
 .good-content {
   font-size: 14px;
-  margin-top: 40rpx;
-  padding: 20rpx;
+  margin-top: 20rpx;
+  padding: 20rpx 20rpx 0 20rpx;
   width: 500rpx;
-  height: 400rpx;
+  height: 380rpx;
   display: flex;
   flex-flow: column nowrap;
   align-items: space-between;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .good-category {
   display: flex;
   flex-flow: row nowrap;
+  margin-bottom: 20rpx;
+  padding: 10rpx 0;
+  border-bottom: 1px solid gainsboro;
 }
 .good-quantity {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin-bottom: 20rpx;
+  padding: 5rpx 0;
+  border-bottom: 1px solid gainsboro;
+  align-items: center;
 }
 .good-buy {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
+}
+
+.good-title {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.gray-color {
+  color: gray;
+}
+
+.custom-botton {
+  width: 100rpx !important;
+  color: black !important;
+  margin-right: 5rpx !important;
+  background-color: gainsboro !important;
+}
+
+.selected-button {
+  width: 100rpx !important;
+  color: white !important;
+  margin-right: 5rpx !important;
+  background-color: #AB956D !important;
+}
+
+.custom-popup {
+  border-radius: 20rpx;
 }

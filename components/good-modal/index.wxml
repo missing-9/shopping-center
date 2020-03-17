@@ -1,20 +1,20 @@
 <!--components/good-modal.wxml-->
-<van-popup show="{{ show }}" bind:close="onClose" closeable>
+<van-popup show="{{ show }}" bind:close="onClose" closeable close-icon-position="top-right" close-icon="close"  custom-class="custom-popup">
   <view class="good-content">
-    <text style="text-align: center">{{good.name}}</text>
+    <text class="good-title">{{good.name}}</text>
     <view >
-        <text>规格</text>    
+        <text class="gray-color">规格</text>    
     <view class="good-category">
-        <van-button wx:for="{{categories}}" wx:key="index"  size="mini" custom-style="width: 50px" bindtap="changeCategory" data-category="{{item}}" color="{{good.selectedCategory === item ? 'orange': 'gray'}}">{{item}}</van-button>
+        <van-button wx:for="{{categories}}" wx:key="index"  size="mini" bindtap="changeCategory" data-category="{{item}}" custom-class="{{good.selectedCategory === item ? 'selected-button': 'custom-botton'}}">{{item}}</van-button>
     </view>
     </view>
     <view class="good-quantity">
-      <text>购买数量</text>
+      <text class="gray-color">购买数量</text>
       <van-stepper value="{{count}}" bind:change="changeCount" />
     </view>
     <view class="good-buy">
-      <text style="color: red">价格: ￥{{currentPrice * count}}</text>
-      <van-button bindtap="addToCart"  type="info" size="small" custom-style="width: 100px">加人购物车</van-button>
+      <text style="color: red">￥{{currentPrice * count}}</text>
+      <van-button bindtap="addToCart"  round size="small" custom-style="width: 80px" color="#AB956D" >加人购物车</van-button>
     </view>
   </view>
   

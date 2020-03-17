@@ -3,7 +3,7 @@
     <van-swipe-cell right-width="{{ 65 }}"  wx:for="{{cartInfo}}" wx:key="{{item.id+item.selectedCategory}}" close="deleteItem">
       <van-card
           num="{{item.count}}"
-          price="{{item.count * item.selectedPrice}}"
+          price="{{item.selectedPrice}}"
           title="{{item.name}}"
           desc="类型：{{item.selectedCategory}}"
           thumb="{{item.img}}"

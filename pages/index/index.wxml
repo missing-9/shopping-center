@@ -21,15 +21,15 @@
 
 <cover-image src="/static/img/shop/special.jpg" bindtap="jumpToSpecial"></cover-image>
 
-<van-grid column-num="2">
+<van-grid column-num="2" gutter="{{ 10 }}">
   <van-grid-item use-slot wx:for="{{ goods }}" border="{{false}}" gutter="{{ 10 }}" wx:key="index">
     <van-image src="{{item.img}}"   width="8rem"
   height="8rem"
   fit="contain"></van-image>
     <text>{{item.name}}</text>
     <view class="shopping-cart">
-      <text>¥{{item.priceInfo[0].price}}</text>
-      <van-icon data-id="{{item.id}}" name="cart-o" color="orange" size="1.5rem" bindtap="showPopup"/>
+      <text style="color: red">¥{{item.priceInfo[0].price}}</text>
+      <van-icon data-id="{{item.id}}" name="cart-o" color="#AB956D" size="1.5rem" bindtap="showPopup"/>
     </view>
   </van-grid-item>
 </van-grid>
