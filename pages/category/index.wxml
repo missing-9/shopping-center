@@ -1,8 +1,13 @@
-<van-grid column-num="2">
-  <van-grid-item use-slot wx:for="{{ 2 }}" border="{{false}}" gutter="{{ 10 }}" wx:for-item="index">
-    <van-image src="https://img.yzcdn.cn/vant/apple-{{ index + 1 }}.jpg"   width="8rem"
-  height="8rem"
-  fit="contain"></van-image>
-  <van-icon name="cart-o" color="orange" size="20px"/>
-  </van-grid-item>
-</van-grid>
+<!-- <view class="main"> -->
+<!-- <view class="categroy-left">
+        <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}"
+            bindtap="switchTab"
+            class="cate-list {{curIndex === index?'on':''}}">{{item.name}}</view>
+    </view>
+
+    <van-sidebsar></van-sidebar> -->
+<van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+  <van-sidebar-item title="热带辣果" custom-class="sidebar-color" />
+  <van-sidebar-item title="清新萌果" custom-class="sidebar-color" />
+  <van-sidebar-item title="留恋香果" custom-class="sidebar-color" />
+</van-sidebar>
