@@ -12,3 +12,22 @@
 .custome-card {
   border-bottom: 1px solid gray;
 }
+
+.cart {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.check {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  border-top: 1px solid gainsboro;
+  padding: 5rpx 0;
+}

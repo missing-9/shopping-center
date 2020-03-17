@@ -1,12 +1,12 @@
 const app = getApp();
 // pages/cart/index.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
-    cartInfo: []
+    cartInfo: [],
+    sumPrice: 0
   },
 
   /**
@@ -27,7 +27,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({ cartInfo: app.globalData.cart });
+    const sumPrice = app.globalData.cart.reduce((pre, cru) => {
+      const singleItem = cru.count * cru.selectedPrice;
+      return pre += singleItem;
+    }, 0);
+    this.setData({ cartInfo: app.globalData.cart, sumPrice });
   },
 
   /**
@@ -67,8 +71,14 @@ Page({
 
   deleteItem(e) {
     const selectedId = e.currentTarget.dataset.id;
-    const cartInfo = this.data.cartInfo.filter(i => i.id !== selectedId);
-    this.setData({ cartInfo });
+    const category = e.currentTarget.dataset.category;
+    const cartInfo = this.data.cartInfo.filter(i => !(i.id === selectedId && i.selectedCategory === category));
+    const sumPrice = cartInfo.reduce((pre, cru) => {
+      const singleItem = cru.count * cru.selectedPrice;
+      return pre += singleItem;
+    }, 0);
+    this.setData({ cartInfo, sumPrice });
     app.globalData.cart = cartInfo;
-  }
+  },
+  
 })

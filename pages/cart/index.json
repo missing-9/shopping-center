@@ -3,6 +3,6 @@
   "usingComponents": {
       "van-swipe-cell": "/miniprogram_npm/miniprogram_npm/@vant/weapp/swipe-cell/index",
       "van-card": "/miniprogram_npm/miniprogram_npm/@vant/weapp/card/index",
-      "van-divider": "/miniprogram_npm/miniprogram_npm/@vant/weapp/divider/index"
+      "van-button": "/miniprogram_npm/miniprogram_npm/@vant/weapp/button/index"
   }
 }
