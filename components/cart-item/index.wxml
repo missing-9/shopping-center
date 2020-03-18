@@ -1,0 +1,15 @@
+<!--components/cart-item.wxml-->
+ <van-swipe-cell right-width="{{ 65 }}"close="deleteItem">
+    <van-card
+        price="{{item.selectedPrice}}"
+        title="{{item.name}}"
+        desc="类型：{{item.selectedCategory}}"
+        thumb="{{item.img}}"
+        custom-class="custom-card"
+      >
+        <view slot="num" class="custom-num">
+          <van-stepper value="{{item.count}}" bind:change="changeCount" />
+        </view>
+      </van-card>
+      <view data-id="{{item.id}}"  data-category="{{item.selectedCategory}}" slot="right" class="delete" bindtap="deleteItem">删除</view>
+</van-swipe-cell>

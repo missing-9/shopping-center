@@ -69,9 +69,7 @@ Page({
 
   },
 
-  deleteItem(e) {
-    const selectedId = e.currentTarget.dataset.id;
-    const category = e.currentTarget.dataset.category;
+  deleteItem({ detail: { selectedId, category } }) {
     const cartInfo = this.data.cartInfo.filter(i => !(i.id === selectedId && i.selectedCategory === category));
     const sumPrice = cartInfo.reduce((pre, cru) => {
       const singleItem = cru.count * cru.selectedPrice;
@@ -80,5 +78,17 @@ Page({
     this.setData({ cartInfo, sumPrice });
     app.globalData.cart = cartInfo;
   },
+
+  sumPrice({ detail: { selectedId, category, count } }) {
+    const cartInfo = this.data.cartInfo;
+    const current = cartInfo.find(i => i.id === selectedId && i.selectedCategory === category);
+    current.count = count;
+    const sumPrice = cartInfo.reduce((pre, cru) => {
+      const singleItem = cru.count * cru.selectedPrice;
+      return pre += singleItem;
+    }, 0);
+    this.setData({ sumPrice });
+    app.globalData.cart = cartInfo;
+  }
   
 })
