@@ -27,7 +27,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const sumPrice = app.globalData.cart.reduce((pre, cru) => {
+    const sumPrice = app.globalData.cart.filter(i => i.checked).reduce((pre, cru) => {
       const singleItem = cru.count * cru.selectedPrice;
       return pre += singleItem;
     }, 0);
@@ -79,11 +79,12 @@ Page({
     app.globalData.cart = cartInfo;
   },
 
-  sumPrice({ detail: { selectedId, category, count } }) {
+  sumPrice({ detail: { selectedId, category, count, checked } }) {
     const cartInfo = this.data.cartInfo;
     const current = cartInfo.find(i => i.id === selectedId && i.selectedCategory === category);
     current.count = count;
-    const sumPrice = cartInfo.reduce((pre, cru) => {
+    current.checked = checked;
+    const sumPrice = cartInfo.filter(i => i.checked).reduce((pre, cru) => {
       const singleItem = cru.count * cru.selectedPrice;
       return pre += singleItem;
     }, 0);

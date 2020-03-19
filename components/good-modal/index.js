@@ -18,7 +18,7 @@ Component({
   lifetimes: {
     attached() {
       const selectedCategory = this.properties.good.priceInfo[0].category;
-      this.setData({ good: { ...this.properties.good, count: 1, selectedCategory } })
+      this.setData({ good: { ...this.properties.good, count: 1, selectedCategory, checked: false } })
     },
   },
 
