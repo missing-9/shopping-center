@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "全部分类",
+  "usingComponents": {
+    "van-sidebar": "/miniprogram_npm/miniprogram_npm/@vant/weapp/sidebar/index",
+    "van-sidebar-item": "/miniprogram_npm/miniprogram_npm/@vant/weapp/sidebar-item/index"
+  }
+}

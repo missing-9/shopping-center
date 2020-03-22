@@ -2,7 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/category/index",
+    "pages/category/category",
     "pages/index/quickly-buy/index",
     "pages/goods/index",
     "pages/cart/index"
@@ -20,7 +20,7 @@
         "selectedIconPath":"/static/img/tab-bar/home-selected.png"
       },
       {
-        "pagePath": "pages/category/index",
+        "pagePath": "pages/category/category",
         "text": "分类",
         "iconPath": "/static/img/tab-bar/category.png",
         "selectedIconPath": "/static/img/tab-bar/category-selected.png"
