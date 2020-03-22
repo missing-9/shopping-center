@@ -34,8 +34,17 @@ Component({
       const count = e.detail;
       const selectedId = this.data.item.id;
       const category = this.data.item.selectedCategory;
+      const checked = this.data.item.checked;
       this.setData({ item: {...this.data.item, count } });
-      this.triggerEvent('sumPrice', { selectedId, category, count });
+      this.triggerEvent('sumPrice', { selectedId, category, count, checked });
+    },
+    toggleCheck(e) {
+      const checked = e.detail;
+      const selectedId = this.data.item.id;
+      const category = this.data.item.selectedCategory;
+      const count = this.data.item.count;
+      this.setData({ item: { ...this.data.item, checked } });
+      this.triggerEvent('sumPrice', { selectedId, category, count, checked });
     }
   }
 })

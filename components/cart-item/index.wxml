@@ -1,5 +1,6 @@
 <!--components/cart-item.wxml-->
  <van-swipe-cell right-width="{{ 65 }}"close="deleteItem">
+  <van-checkbox value="{{ item.checked }}" bind:change="toggleCheck"></van-checkbox>
     <van-card
         price="{{item.selectedPrice}}"
         title="{{item.name}}"
