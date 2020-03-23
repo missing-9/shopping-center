@@ -1,0 +1,82 @@
+page {
+  background-color: #b5e4cada;
+}
+
+.user_info_wrap {
+  height: 38vh;
+  overflow: hidden;
+  background-color: #ab956d;
+  position: relative;
+}
+
+.user_info_wrap  .user_img_wrap {
+  position: relative;
+}
+
+.user_info_wrap  .user_btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  border: 1rpx solid greenyellow;
+  color: green;
+  font-size: 38rpx;
+  padding: 30rpx;
+  border-radius: 10rpx;
+}
+
+.user_info_wrap  .user_img_wrap  .user_bg {
+  height: 38vh;
+  width: 100%;
+  filter: blur(15rpx);
+}
+
+.user_info_wrap  .user_img_wrap  .user_info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+
+.user_info_wrap  .user_img_wrap  .user_info .user_icon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.user_info_wrap  .user_img_wrap  .user_info .user_name {
+  color: #09fd77da;
+  margin-top: 40rpx;
+  font-size: 40rpx;
+}
+
+.user_content {
+  position: relative;
+}
+
+.user_content .user_main {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+}
+
+.user_content .user_main .history_wrap {
+  background-color: #fff;
+  display: flex;
+   
+}
+
+.user_content .user_main .history_wrap navigator{
+ flex: 1;
+ text-align: center;
+ padding: 10rpx;
+}
+.user_content .user_main .history_wrap navigator .his_num {
+  color: #ab956d;
+}
+
+.user_content .user_main .history_wrap navigator .his_name {
+}
