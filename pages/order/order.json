@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单查询",
+  "usingComponents": {
+    "van-tab":"/miniprogram_npm/miniprogram_npm/@vant/weapp/tab/index",
+    "van-tabs": "/miniprogram_npm/miniprogram_npm/@vant/weapp/tabs/index"
+  }
+}

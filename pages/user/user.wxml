@@ -12,7 +12,7 @@
 </view>
 <view class="user_content">
   <view class="user_main">
-  <!-- 历史足迹 -->
+    <!-- 历史足迹 -->
     <view class="history_wrap">
       <navigator>
         <view class="his_num">0</view>
@@ -32,5 +32,41 @@
       </navigator>
     </view>
     <!-- 我的订单 -->
+    <view class="orders_wrap">
+      <view class="orders_title">我的订单</view>
+      <view class="order_content">
+        <navigator url="/pages/order/order?type=1">
+          <view class="iconfont iconbianzu"></view>
+          <view class="order_name">全部订单</view>
+        </navigator>
+        <navigator url="/pages/order/order?type=2">
+          <view class="iconfont icondaifukuan"></view>
+          <view class="order_name">待付款</view>
+        </navigator>
+        <navigator url="/pages/order/order?type=3">
+          <view class="iconfont icondaishouhuo1"></view>
+          <view class="order_name">待收货</view>
+        </navigator>
+        <navigator>
+          <view class="iconfont iconicon5"></view>
+          <view class="order_name">退款/退货</view>
+        </navigator>
+      </view>
+    </view>
+    <!-- 收获地址管理 -->
+    <view class="address_wrap">
+      收获地址管理
+    </view>
+    <view class="app_info_wrap">
+      <view class="app_info_item app_info_contact">
+        <text>联系客服</text>
+        <text>918-911-911</text>
+      </view>
+      <view class="app_info_item">意见反馈</view>
+      <view class="app_info_item">关于我们</view>
+    </view>
+    <view class="recommend_wrap">
+      快来推广我吧~
+    </view>
   </view>
 </view>

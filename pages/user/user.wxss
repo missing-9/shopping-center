@@ -1,3 +1,5 @@
+@import "../../iconfont.wxss";
+
 page {
   background-color: #b5e4cada;
 }
@@ -23,7 +25,7 @@ page {
   font-size: 38rpx;
   padding: 30rpx;
   border-radius: 10rpx;
-  border-bottom-color: #09fd77da
+  border-bottom-color: #09fd77da;
 }
 
 .user_info_wrap  .user_img_wrap  .user_bg {
@@ -62,22 +64,76 @@ page {
   left: 50%;
   transform: translateX(-50%);
   top: -40rpx;
+  color: #666;
+  padding-bottom: 100rpx;
 }
 
 .user_content .user_main .history_wrap {
   background-color: #fff;
   display: flex;
-   
 }
 
-.user_content .user_main .history_wrap navigator{
- flex: 1;
- text-align: center;
- padding: 10rpx;
+.user_content .user_main .orders_wrap {
+  background-color: #fff;
+  margin-top: 30rpx;
 }
+
+.user_content .user_main .address_wrap {
+  background-color: #fff;
+  margin-top: 30rpx;
+  padding: 20rpx;
+}
+
+.user_content .user_main .orders_wrap .orders_title {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.user_content .user_main .history_wrap navigator {
+  flex: 1;
+  text-align: center;
+  padding: 10rpx;
+}
+
 .user_content .user_main .history_wrap navigator .his_num {
   color: #ab956d;
 }
 
 .user_content .user_main .history_wrap navigator .his_name {
 }
+
+.user_content .user_main .orders_wrap .order_content {
+  display: flex;
+}
+
+.user_content .user_main .orders_wrap .order_content navigator {
+  padding: 15rpx 0;
+  flex: 1;
+  text-align: center;
+}
+
+.user_content .user_main .orders_wrap .order_content navigator .iconfont {
+  color: #ab956d;
+}
+
+.user_content .user_main .app_info_wrap{
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.user_content .user_main .app_info_wrap .app_info_item{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc
+}
+
+.user_content .user_main .app_info_wrap .app_info_contact{
+ display: flex;
+ justify-content: space-between;
+}
+
+.user_content .user_main .recommend_wrap{
+  background-color: #fff;
+  margin-top: 30rpx;
+  padding: 20rpx;
+}
+

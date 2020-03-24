@@ -1,13 +1,14 @@
 {
   "pages": [
-    "pages/user/user",
-    "pages/login/login",
     "pages/index/index",
     "pages/logs/logs",
     "pages/category/category",
     "pages/index/quickly-buy/index",
     "pages/goods/index",
-    "pages/cart/index"
+    "pages/cart/index",
+    "pages/order/order",
+    "pages/user/user",
+    "pages/login/login"
   ],
   "tabBar": {
     "color": "#b7b7b7",
@@ -19,7 +20,7 @@
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "/static/img/tab-bar/home.png",
-        "selectedIconPath":"/static/img/tab-bar/home-selected.png"
+        "selectedIconPath": "/static/img/tab-bar/home-selected.png"
       },
       {
         "pagePath": "pages/category/category",
