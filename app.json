@@ -35,7 +35,7 @@
         "selectedIconPath": "/static/img/tab-bar/category-selected.png"
       },
       {
-        "pagePath": "pages/logs/logs",
+        "pagePath": "pages/user/user",
         "text": "我的",
         "iconPath": "/static/img/tab-bar/person.png",
         "selectedIconPath": "/static/img/tab-bar/person-selected.png"

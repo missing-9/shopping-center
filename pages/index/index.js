@@ -1,3 +1,4 @@
+import getData from '../../mock/shop.js';
 
 Page({
   data: {
@@ -24,41 +25,25 @@ Page({
     ],
     show: false,
     goods: [
-      {
-        id: 1,
-        name: 'item1',
-        img: 'https://img.yzcdn.cn/vant/apple-1.jpg',
-        priceInfo: [{ category: 'a', price: 100 }, { category: 'b', price: 200 }],
-      },
-      {
-        id: 2,
-        name: 'item2',
-        img: 'https://img.yzcdn.cn/vant/apple-2.jpg',
-        priceInfo: [{ category: 'c', price: 300 }, { category: 'd', price: 400 }],
-      },
-      {
-        id: 3,
-        name: 'item3',
-        img: 'https://img.yzcdn.cn/vant/apple-3.jpg',
-        priceInfo: [{ category: 'e', price: 500 }],
-      },
-      {
-        id: 4,
-        name: 'item4',
-        img: 'https://img.yzcdn.cn/vant/apple-4.jpg',
-        priceInfo: [{ category: 'g', price: 100 }, { category: 'h', price: 200 }, { category: 'i', price: 300 }],
-      }
+     
     ],
     currentGood: {}
   },
+
+  onLoad() {
+    this.setData({ goods: getData('fruit') });
+  },
+
   jumpToSpecial() {
     wx.navigateTo({ url: './quickly-buy/index' });
   },
+
   showPopup(e) {
     const currentId = e.currentTarget.dataset.id;
     const currentGood = this.data.goods.find(item => item.id === currentId);
     this.setData({ currentGood, show: true });
   },
+
   onClose() {
     this.setData({ currentGood: {}, show: false });
   },
