@@ -1,6 +1,66 @@
-<van-tabs active="{{ active }}" bind:change="onChange" animated swipeable>
-  <van-tab title="全部">内容 1</van-tab>
-  <van-tab title="待付款">内容 2</van-tab>
-  <van-tab title="待收货">内容 3</van-tab>
-  <van-tab title="退货/退款">内容 4</van-tab>
+<van-tabs bind:change="onChange" bind:click="handleTabsItemChange">
+  <van-tab title="{{tabs[0].value}}" class="order_main">
+    <view wx:for="{{orders}}" wx:key="order_id" class="order_item">
+      <view class="order_no_row">
+        <view class="order_no_text">订单编号</view>
+        <view class="order_no_value">{{item.order_number}}</view>
+      </view>
+      <view class="order_price_row">
+        <view class="order_price_text">订单价格</view>
+        <view class="order_price_value">￥{{item.order_price}}</view>
+      </view>
+      <view class="order_time_row">
+        <view class="order_time_text">订单日期</view>
+        <view class="order_time_value">{{item.create_time_cn}}</view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="{{tabs[1].value}}" class="order_main">
+    <view wx:for="{{orders}}" wx:key="order_id" class="order_item">
+      <view class="order_no_row">
+        <view class="order_no_text">订单编号</view>
+        <view class="order_no_value">{{item.order_number}}</view>
+      </view>
+      <view class="order_price_row">
+        <view class="order_price_text">订单价格</view>
+        <view class="order_price_value">￥{{item.order_price}}</view>
+      </view>
+      <view class="order_time_row">
+        <view class="order_time_text">订单日期</view>
+        <view class="order_time_value">{{item.create_time_cn}}</view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="{{tabs[2].value}}" class="order_main">
+    <view wx:for="{{orders}}" wx:key="order_id" class="order_item">
+      <view class="order_no_row">
+        <view class="order_no_text">订单编号</view>
+        <view class="order_no_value">{{item.order_number}}</view>
+      </view>
+      <view class="order_price_row">
+        <view class="order_price_text">订单价格</view>
+        <view class="order_price_value">￥{{item.order_price}}</view>
+      </view>
+      <view class="order_time_row">
+        <view class="order_time_text">订单日期</view>
+        <view class="order_time_value">{{item.create_time_cn}}</view>
+      </view>
+    </view>
+  </van-tab>
+  <van-tab title="{{tabs[3].value}}" class="order_main">
+    <view wx:for="{{orders}}" wx:key="order_id" class="order_item">
+      <view class="order_no_row">
+        <view class="order_no_text">订单编号</view>
+        <view class="order_no_value">{{item.order_number}}</view>
+      </view>
+      <view class="order_price_row">
+        <view class="order_price_text">订单价格</view>
+        <view class="order_price_value">￥{{item.order_price}}</view>
+      </view>
+      <view class="order_time_row">
+        <view class="order_time_text">订单日期</view>
+        <view class="order_time_value">{{item.create_time_cn}}</view>
+      </view>
+    </view>
+  </van-tab>
 </van-tabs>

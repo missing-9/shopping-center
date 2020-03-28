@@ -1,5 +1,8 @@
+import getOrders from '../../mock/orders.js';
+
 Page({
   data: {
+    orders: [],
     tabs: [{
         id: 0,
         value: "全部",
@@ -35,47 +38,39 @@ Page({
     })
   },
 
-getOrders(type){
-  
-},
+  getOrders(type) {
+    const res = getOrders(type);
+    this.setData({
+      orders: res.map(v => ({ ...v,
+        create_time_cn: (new String(v.create_time).replace(/-/g, "/"))
+      }))
+    })
+  },
 
   onShow: function(options) {
-    let pages=getCurrentPages();
-    let currentPage = pages[pages.length-1];
+    let pages = getCurrentPages();
+    let currentPage = pages[pages.length - 1];
+    const {
+      type
+    } = currentPage.options;
+    this.changeTitleByIndex(type - 1);
+    this.getOrders(type - 1);
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
+  changeTitleByIndex(index) {
+    let {
+      tabs
+    } = this.data;
+    tabs.forEach((v, i) => i === index ? v.isActive = true : v.isActive = false);
+    this.setData({
+      tabs
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
+  handleTabsItemChange(e) {
+    const {
+      index
+    } = e.detail;
+    this.changeTitleByIndex(index);
+    this.getOrders(index);
   }
 })
