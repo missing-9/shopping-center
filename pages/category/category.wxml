@@ -1,17 +1,8 @@
-<!--pages/category/category.wxml-->
-<view class="main">
-  <view class="menu">
-    <view id="{{item.id}}" class="classtype" bindtap="searchTab" wx:for="{{classType}}" wx:key="{{index}}">
-      <text>{{item.name}}</text>
-    </view>
-  </view>
-  <view class="list">
-    <view class="productlist" wx:for="{{productList==''?productAll:productList}}" wx:key="{{index}}">
-      <image src="{{item.src}}" mode="widthFix"></image>
-      <view class="info">
-        <text>品名：{{item.name}}</text>
-        <text>单价：{{item.price}}元</text>
-      </view>
-    </view>
+<view class="cates">
+  <van-search value="{{value}}" input-align="center" placeholder="请输入搜索关键词" />
+  <view class="cates_container">
+    <van-sidebar class="left_menu" active-key="{{ activeKey }}" bind:change="onChange">
+      <van-sidebar-item class="menu_item" wx:for="{{leftMenuList}}" wx:key="*this" title="{{leftMenuList[index]}}"/>
+    </van-sidebar>
   </view>
 </view>

@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "商品列表",
+  "usingComponents": {
+    "van-image": "/miniprogram_npm/miniprogram_npm/@vant/weapp/image/index",
+    "van-tag": "/miniprogram_npm/miniprogram_npm/@vant/weapp/tag/index",
+    "van-cell": "/miniprogram_npm/miniprogram_npm/@vant/weapp/cell/index",
+    "van-cell-group": "/miniprogram_npm/miniprogram_npm/@vant/weapp/cell-group/index",
+    "van-goods-action": "/miniprogram_npm/miniprogram_npm/@vant/weapp/goods-action/index",
+    "van-goods-action-icon": "/miniprogram_npm/miniprogram_npm/@vant/weapp/goods-action-icon/index",
+    "van-goods-action-button": "/miniprogram_npm/miniprogram_npm/@vant/weapp/goods-action-button/index",
+    "van-row": "/miniprogram_npm/miniprogram_npm/@vant/weapp/row/index",
+    "van-col": "/miniprogram_npm/miniprogram_npm/@vant/weapp/col/index"
+  }
+}
