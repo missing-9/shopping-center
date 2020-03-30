@@ -2,12 +2,20 @@
   <view wx:if="{{cartInfo.length !== 0}}">
     <cart-item  wx:for="{{cartInfo}}" wx:key="{{item.id+item.selectedCategory}}" item="{{item}}" bind:deleteItem="deleteItem" bind:sumPrice="sumPrice"></cart-item>
     <view class="check">
-      <text style="color: red">合计：￥{{sumPrice}}</text>
-      <van-button type="danger" round  size="small">结算</van-button>
+      <view class="check-button">
+        <van-checkbox value="{{ allCheck }}" bind:change="toggleCheck"  checked-color="#AB956D"></van-checkbox>
+        <text style="margin-left: 5px">全选</text>
+      </view>
+      <view class='sum-price'>
+        <text style="color: red">合计：￥{{sumPrice}}</text>
+        <van-button type="danger" round  size="small" custom-style="width: 100px">结算</van-button>
+      </view>
     </view>
   </view>
   <view wx:else>
-    暂无商品，请到首页添加吧~
+    <view class='empty-cart'>
+     <text>暂无商品，请到首页添加吧~</text>
      <navigator url="/pages/index/index" open-type="switchTab" style="color: red">去逛逛~</navigator>
+     </view>
   </view>
 </view>

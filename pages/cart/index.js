@@ -6,7 +6,8 @@ Page({
    */
   data: {
     cartInfo: [],
-    sumPrice: 0
+    sumPrice: 0,
+    allCheck: false
   },
 
   /**
@@ -27,6 +28,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    // app.globalData.cart = [{
+    //   id: 1,
+    //   name: 'item1',
+    //   img: 'https://img.yzcdn.cn/vant/apple-1.jpg',
+    //   priceInfo: [{ category: 'a', price: 100 }, { category: 'b', price: 200 }],
+    //   selectedPrice: 100,
+    //   selectedCategory: 'a'
+    // }, {
+    //     id: 2,
+    //     name: 'item2',
+    //     img: 'https://img.yzcdn.cn/vant/apple-1.jpg',
+    //     priceInfo: [{ category: 'a', price: 100 }, { category: 'b', price: 200 }],
+    //     selectedPrice: 200,
+    //     selectedCategory: 'b'
+    //   },];
     const sumPrice = app.globalData.cart.filter(i => i.checked).reduce((pre, cru) => {
       const singleItem = cru.count * cru.selectedPrice;
       return pre += singleItem;
@@ -88,7 +104,24 @@ Page({
       const singleItem = cru.count * cru.selectedPrice;
       return pre += singleItem;
     }, 0);
-    this.setData({ sumPrice });
+    this.setData({ cartInfo, sumPrice });
+    if (!cartInfo.some(i => i.checked !== checked)) {
+      this.setData({ allCheck: checked });
+    }
+    app.globalData.cart = cartInfo;
+  },
+
+  toggleCheck(e) {
+    const allCheck = e.detail;
+    const cartInfo = this.data.cartInfo;
+    for (let item of cartInfo) {
+      item.checked = allCheck;
+    }
+    const sumPrice = cartInfo.filter(i => i.checked).reduce((pre, cru) => {
+      const singleItem = cru.count * cru.selectedPrice;
+      return pre += singleItem;
+    }, 0);
+    this.setData({ allCheck, cartInfo, sumPrice });
     app.globalData.cart = cartInfo;
   }
   

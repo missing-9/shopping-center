@@ -12,7 +12,23 @@
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   border-top: 1px solid gainsboro;
-  padding: 5rpx 0;
+  padding: 5px 1rem;
+}
+
+.check-button {
+  display: flex;
+  align-items: center;
+}
+
+.sum-price {
+  width: 65%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.empty-cart {
+  width: 60%;
+  margin: 5rem auto;
 }

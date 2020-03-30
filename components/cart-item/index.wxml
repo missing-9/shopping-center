@@ -1,16 +1,16 @@
 <!--components/cart-item.wxml-->
  <van-swipe-cell right-width="{{ 65 }}"close="deleteItem">
-  <van-checkbox value="{{ item.checked }}" bind:change="toggleCheck"></van-checkbox>
-    <van-card
-        price="{{item.selectedPrice}}"
-        title="{{item.name}}"
-        desc="类型：{{item.selectedCategory}}"
-        thumb="{{item.img}}"
-        custom-class="custom-card"
-      >
-        <view slot="num" class="custom-num">
-          <van-stepper value="{{item.count}}" bind:change="changeCount" />
-        </view>
-      </van-card>
-      <view data-id="{{item.id}}"  data-category="{{item.selectedCategory}}" slot="right" class="delete" bindtap="deleteItem">删除</view>
+    <view class='item-content'>
+      <van-checkbox value="{{ item.checked }}" bind:change="toggleCheck" checked-color="#AB956D"></van-checkbox>
+      <van-image width="5rem" height="5rem" fit="cover" src="{{item.img}}"></van-image>
+      <view class='item-detail'>
+        <text>{{item.name}}</text>
+        <text style="font-size: 0.9em; color: gray;">类型：{{item.selectedCategory}}</text>
+        <text style="color: red">￥{{item.selectedPrice}}</text>
+      </view>
+      <view class='custom-stepper'>
+        <van-stepper value="{{item.count}}" bind:change="changeCount" />
+      </view>
+    </view>
+    <view data-id="{{item.id}}"  data-category="{{item.selectedCategory}}" slot="right" class="delete" bindtap="deleteItem">删除</view>
 </van-swipe-cell>
