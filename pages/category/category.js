@@ -12,6 +12,13 @@ Page({
     this.getCategory();
   },
 
+  onChange({detail}){
+    console.log(detail);
+    this.setData({
+      activeKey:detail
+    })
+  },
+
   getCategory() {
     const category = getCategory;
     this.Cates = category;

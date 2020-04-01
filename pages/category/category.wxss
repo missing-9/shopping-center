@@ -13,7 +13,6 @@ page {
 
 .cates .cates_container .left_menu {
   display: flex;
-  flex: 2;
   background-color: aqua !important;
 }
 .cates .cates_container .left_menu .menu_item{
@@ -26,4 +25,8 @@ page {
   display: flex;
   flex: 5;
   background-color: lawngreen;
+}
+
+.cates .cates_content{
+  flex: 1;
 }

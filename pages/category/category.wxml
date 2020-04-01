@@ -2,7 +2,10 @@
   <van-search value="{{value}}" input-align="center" placeholder="请输入搜索关键词" />
   <view class="cates_container">
     <van-sidebar class="left_menu" active-key="{{ activeKey }}" bind:change="onChange">
-      <van-sidebar-item class="menu_item" wx:for="{{leftMenuList}}" wx:key="*this" title="{{leftMenuList[index]}}"/>
+      <van-sidebar-item class="menu_item" wx:for="{{leftMenuList}}" wx:key="*this" title="{{leftMenuList[index]}}" />
     </van-sidebar>
+    <view class="cates_content">
+      {{rightContent[activeKey].cat_name}}
+    </view>
   </view>
 </view>
