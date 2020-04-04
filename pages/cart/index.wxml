@@ -8,7 +8,7 @@
       </view>
       <view class='sum-price'>
         <text style="color: red">合计：￥{{sumPrice}}</text>
-        <van-button type="danger" round  size="small" custom-style="width: 100px">结算</van-button>
+        <van-button type="danger" round  size="small" custom-style="width: 100px" bindtap="goCheck">结算</van-button>
       </view>
     </view>
   </view>

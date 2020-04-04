@@ -4,12 +4,13 @@
     "pages/goods/goods",
     "pages/logs/logs",
     "pages/category/category",
-    "pages/index/quickly-buy/index",
+    "pages/quickly-buy/index",
     "pages/goods_detail/goods_detail",
     "pages/cart/index",
     "pages/order/order",
     "pages/user/user",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/check-order/index"
   ],
   "tabBar": {
     "color": "#b7b7b7",

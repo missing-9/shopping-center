@@ -1,0 +1,44 @@
+<view class='container1'>
+  <view class='address'>
+    <text>请选择收货地址</text>
+    <van-icon name="arrow" />
+  </view>
+  <view class='content'>
+    <view>
+      <van-card
+        num="2"
+        price="2.00"
+        desc="描述信息"
+        title="商品标题"
+        thumb="https://img.yzcdn.cn/vant/apple-1.jpg"
+      />
+    </view>
+    <view class='category'>
+      <text>配送方式</text>
+      <view>
+       <van-button wx:for="{{categories}}" wx:key="index"  size="mini" bindtap="changeCategory" data-category="{{item}}" custom-class="{{selectedCategory === item ? 'selected-button': 'custom-botton'}}">{{item}}</van-button>
+      </view>
+    </view>
+    <view class='coupon'>
+      <text>优惠券</text>
+      <van-icon name="arrow" />
+    </view>
+    <view class='carriage'>
+      <text>运费</text>
+      <text style="color: red">￥100</text>
+    </view>
+    <view>
+      <van-field
+        value="{{ note }}"
+        placeholder="订单备注"
+        border="{{ false }}"
+        bind:change="onChange"
+      />
+    </view>
+  </view>
+    <view class='submit'>
+      <text style="color: red">合计：￥102</text>
+      <van-button type="danger" round  size="small" custom-style="width: 100px">提交订单</van-button>
+    </view>
+</view>
+

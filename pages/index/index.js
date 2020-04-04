@@ -14,7 +14,7 @@ Page({
     },
     searchValue: '',
     grids: [
-      { text: '快速购买', icon: '/static/img/shop/grids/purchase.png', url: './quickly-buy/index' },
+      { text: '快速购买', icon: '/static/img/shop/grids/purchase.png', url: '../quickly-buy/index' },
       { text: '拼团', icon: '/static/img/shop/grids/group-buy.png', url: '' },
       { text: '秒杀', icon: '/static/img/shop/grids/clock.png', url: '../goods/index' },
       { text: '预约', icon: '/static/img/shop/grids/booking.png', url: '' },

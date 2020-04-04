@@ -1,0 +1,73 @@
+.container1 {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.address {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.category {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-left: 18px;
+}
+
+.custom-botton {
+  width: 100rpx !important;
+  color: black !important;
+  margin-right: 5rpx !important;
+  background-color: gainsboro !important;
+}
+
+.selected-button {
+  width: 100rpx !important;
+  color: white !important;
+  margin-right: 5rpx !important;
+  background-color: red !important;
+}
+
+.coupon {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-left: 18px;
+}
+
+.carriage {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-left: 18px;
+}
+
+.submit {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  border-top: 1px solid gainsboro;
+  padding: 5px 1rem;
+}

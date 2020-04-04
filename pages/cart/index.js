@@ -123,6 +123,10 @@ Page({
     }, 0);
     this.setData({ allCheck, cartInfo, sumPrice });
     app.globalData.cart = cartInfo;
+  },
+
+  goCheck() {
+    wx.navigateTo({ url: '../check-order/index'});
   }
   
 })
