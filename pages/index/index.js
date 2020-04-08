@@ -2,7 +2,7 @@ import getData from '../../mock/shop.js';
 
 Page({
   data: {
-    announcement: 'Vant Weapp 是移动端 Vue 组件库 Vant 的小程序版本，两者基于相同的视觉规范，提供一致的 API 接口，助力开发者快速搭建小程序应用。',
+    announcement: '商铺开业啦',
     swiper: {
       imgs: ['/static/img/shop/swiper/swiper-item1.jpg', '/static/img/shop/swiper/swiper-item2.jpg',
 '/static/img/shop/swiper/swiper-item3.jpg',],
